@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import type React from "react"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>
+      <Analytics/>
       <body className={inter.className}>
         {children}
         <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
