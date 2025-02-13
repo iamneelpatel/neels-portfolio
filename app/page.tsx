@@ -6,7 +6,6 @@ import CalendlyWidget from "@/components/CalendlyWidget"
 export default function Page() {
   return (
     <>
-    
       <div className="min-h-screen bg-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b">
@@ -19,7 +18,7 @@ export default function Page() {
                   </div>
                   <span className="font-semibold text-lg">Neel Patel</span>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4">
                   <a href="#skills" className="font-medium hover:text-primary">
                     Skills
                   </a>
@@ -49,13 +48,13 @@ export default function Page() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4 overflow-hidden">
+        <section className="pt-24 md:pt-32 pb-16 px-4 overflow-hidden">
           <div className="container mx-auto max-w-6xl relative">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="z-10">
-                <h1 className="text-5xl font-serif mb-6">Neel Patel: Finance & Tech Innovator</h1>
+              <div className="z-10 text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-serif mb-6">Neel Patel: Finance & Tech Innovator</h1>
                 <p className="text-xl text-gray-600 mb-8">Bridging the gap between finance and technology</p>
-                <div className="flex gap-4">
+                <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
                   <a
                     href="mailto:neelpatel1804@gmail.com"
                     className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 py-2"
@@ -73,8 +72,8 @@ export default function Page() {
                   </a>
                 </div>
               </div>
-              <div className="relative">
-                <div className="relative w-[300px] h-[300px] mx-auto">
+              <div className="relative mx-auto md:mx-0">
+                <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px]">
                   {/* Outer decorative circles */}
                   <div
                     className="absolute inset-0 rounded-full border-2 border-dashed border-gray-200 animate-spin-slow"
@@ -246,11 +245,13 @@ export default function Page() {
 
         {/* Footer */}
         <footer className="py-8 border-t" id="contact">
-          <CalendlyWidget/>
           <div className="container mx-auto max-w-6xl px-4">
-            <div className="flex justify-between items-center">
-              <p className="text-gray-600">© 2024. All Rights Reserved.</p>
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-600 mb-4 md:mb-0">© 2024. All Rights Reserved.</p>
               <p className="text-gray-600">neelpatel1804@gmail.com</p>
+            </div>
+            <div className="mt-4">
+              <CalendlyWidget />
             </div>
           </div>
         </footer>
